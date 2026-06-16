@@ -1,0 +1,53 @@
+{
+  "name": "browser-llm-cache",
+  "version": "1.0.0",
+  "description": "Progressive, low-RAM, hash-verified client-side caching for large LLM and WebGPU model weights",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "prepublishOnly": "npm run build"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0 || ^19.0.0"
+  },
+  "peerDependenciesMeta": {
+    "react": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "typescript": "^5.4.5",
+    "tsup": "^8.0.2",
+    "vitest": "^1.6.0",
+    "react": "^18.3.1",
+    "@types/react": "^18.3.3"
+  },
+  "keywords": [
+    "llm",
+    "webgpu",
+    "cache",
+    "transformers",
+    "caching",
+    "browser-llm",
+    "safetensors",
+    "local-ai",
+    "react-hook"
+  ],
+  "author": "",
+  "license": "MIT"
+}
